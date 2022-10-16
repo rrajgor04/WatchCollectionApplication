@@ -10,9 +10,12 @@ namespace WatchCollectionApplication.Controllers
             return "This is my default action...";
         }
 
-        public string Welcome()
+        
+        // GET: /HelloWorld/Welcome/ 
+        // Requires using System.Text.Encodings.Web;
+        public string Welcome(string name, int ID = 1)
         {
-            return "this is the Welcome action method...";
+            return HtmlEncoder.Default.Encode($"Hello {name}, NumTimes is: {ID}");
         }
     }
 }
