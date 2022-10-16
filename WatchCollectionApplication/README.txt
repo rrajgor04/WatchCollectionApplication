@@ -6,3 +6,7 @@
 12:50am - made changes in WatchCollection.cs and run the application and it went successfull.
 1:06am - added parameter in the WatchCollection.cs and run it and it was successfull...
 1:07am - done with part 2...
+2:25am - started the part:3 (lol.. took a long break ... nevermind:))
+2:36am - added folder in Views folder which a razor folder.
+2:42am - added another razor file in View folder and named it Welcome.cshtml
+2:44am - run the application and it went successfull...yaay!!
