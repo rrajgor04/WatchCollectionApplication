@@ -60,7 +60,59 @@ namespace MvcWatchCollectionApplication.Models
                         Durability = 2.5M,
                         Price = 250M,
                         Rating = 3.5M
-                    }
+                    },
+                     new WatchCollectionApplication.Models.Watch
+                     {
+                         BrandName = "Thunderbolt",
+                         WatchMaterial = "Rubber",
+                         TypeOfWatch = "Digital",
+                         Quality = "good",
+                         Durability = 3M,
+                         Price = 250M,
+                         Rating = 3.5M
+                     },
+                      new WatchCollectionApplication.Models.Watch
+                      {
+                          BrandName = "Timex",
+                          WatchMaterial = "steel",
+                          TypeOfWatch = "Analog",
+                          Quality = "Fair",
+                          Durability = 2.5M,
+                          Price = 250M,
+                          Rating = 3.5M
+                      },
+                       new WatchCollectionApplication.Models.Watch
+                       {
+                           BrandName = "Seiko",
+                           WatchMaterial = "Rubber",
+                           TypeOfWatch = "Digital",
+                           Quality = "good",
+                           Durability = 2.5M,
+                           Price = 450M,
+                           Rating = 1.5M
+                       },
+                        new WatchCollectionApplication.Models.Watch
+                        {
+                            BrandName = "Orient",
+                            WatchMaterial = "drubberr",
+                            TypeOfWatch = "Digital",
+                            Quality = "Best",
+                            Durability = 4.5M,
+                            Price = 250M,
+                            Rating = 3.5M
+                        },
+                         new WatchCollectionApplication.Models.Watch
+                         {
+                             BrandName = "Beast",
+                             WatchMaterial = "Rubber",
+                             TypeOfWatch = "Digital",
+                             Quality = "Fair",
+                             Durability = 2.5M,
+                             Price = 250M,
+                             Rating = 3.5M
+                         }
+
+
                     ) ;
                 context.SaveChanges();
 
