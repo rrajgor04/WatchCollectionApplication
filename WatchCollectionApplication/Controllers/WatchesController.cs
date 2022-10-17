@@ -20,9 +20,31 @@ namespace WatchCollectionApplication.Controllers
         }
 
         // GET: Watches
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string watchType, string searchString)
         {
-            return View(await _context.Watch.ToListAsync());
+            IQueryable<string> typeQuery = from w in _context.Watch
+                                            orderby w.TypeOfWatch
+                                           select w.TypeOfWatch;
+
+            var watches = from w in _context.Watch
+                         select w;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                watches = watches.Where(s => s.BrandName.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(watchType))
+            {
+                watches = watches.Where(x => x.TypeOfWatch == watchType);
+            }
+
+            var watchTypeVM = new WatchTypeViewModel
+            {
+                Types = new SelectList(await typeQuery.Distinct().ToListAsync()),
+                Watches = await watches.ToListAsync()
+            };
+            return View(watchTypeVM);
         }
 
         // GET: Watches/Details/5
@@ -54,7 +76,7 @@ namespace WatchCollectionApplication.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,BrandName,ReleaseDate,WatchMaterial,TypeOfWatch,Quality,Durability,Price")] Watch watch)
+        public async Task<IActionResult> Create([Bind("Id,BrandName,ReleaseDate,WatchMaterial,TypeOfWatch,Quality,Durability,Price,Rating")] Watch watch)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +108,7 @@ namespace WatchCollectionApplication.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,BrandName,ReleaseDate,WatchMaterial,TypeOfWatch,Quality,Durability,Price")] Watch watch)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,BrandName,ReleaseDate,WatchMaterial,TypeOfWatch,Quality,Durability,Price,Rating")] Watch watch)
         {
             if (id != watch.Id)
             {
