@@ -13,4 +13,8 @@
 2:46am - started part-4 ...
 11:26pm - added MvcWatchContext.cs
 11:29pm - made changes in startup.cs
-11:31pm - made changes in appsettings.json
+11:31pm - made changes in appsettings.json and build the application and it went without errors.
+11:36pm - started to do scaffold
+***17/10/2022***
+12:35am - added scaffold item..
+12:37am - run the program , clicked on Watch Collection and boom i had my database...yaay..

@@ -36,6 +36,9 @@ namespace WatchCollectionApplication
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddDbContext<WatchCollectionApplicationContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("WatchCollectionApplicationContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
