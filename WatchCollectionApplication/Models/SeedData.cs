@@ -12,9 +12,9 @@ namespace MvcWatchCollectionApplication.Models
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-            using (var context = new MvcWatchContext(
+            using (var context = new WatchCollectionApplicationContext(
                 serviceProvider.GetRequiredService<
-                    DbContextOptions<MvcWatchContext>>()))
+                    DbContextOptions<WatchCollectionApplicationContext>>()))
             {
                 if (context.Watch.Any())
                 {

@@ -2,9 +2,10 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    /*background-color: #EFC7C2;*/
 }
 
 /* Provide sufficient contrast against white background */
@@ -59,18 +60,29 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-color: #4D243D;
+    color: bisque;
+    font-style:italic;
 }
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    text-align:center;
+    background-color: #FFE5D4;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
 }
 
 
 
 
 /****************************************************************************/
+.table {
+    color: #CAC2B5;
+    font-family:'Bell MT';
+    font-style:oblique;
+    font-size:large;
+}
