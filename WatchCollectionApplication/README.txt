@@ -10,3 +10,7 @@
 2:36am - added folder in Views folder which a razor folder.
 2:42am - added another razor file in View folder and named it Welcome.cshtml
 2:44am - run the application and it went successfull...yaay!!
+2:46am - started part-4 ...
+11:26pm - added MvcWatchContext.cs
+11:29pm - made changes in startup.cs
+11:31pm - made changes in appsettings.json
